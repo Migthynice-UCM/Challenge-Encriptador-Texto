@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4fc;
+  }
+  
+  header {
+    height: 70px;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+  }
+  
+  main {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .textBoxContainer {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 160px + 80px);
+    transform: translate(-50%, -50%) translateX(-80px);
+    margin-top: -300px;
+    height: 600px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .textBox {
+    width: 80%;
+    height: 100%;
+    border: none;
+    background-color: #f4f4fc;
+    cursor: pointer;
+    color: #0a3871;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  
+  .textBox::placeholder {
+    color: #0a3871;
+  }
+  
+  .alert {
+    position: absolute;
+    top: 750px;
+    left: 370px;
+    display: flex;
+    color: #495057;
+  }
+  
+  .buttons-container {
+    position: absolute;
+    top: 800px;
+    height: 80px;
+    padding-left: 15%;
+    padding-top: 15px;
+  }
+  
+  .encryptButton,
+  .decryptButton {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+  }
+  
+  .encryptButton {
+    background-color: #0a3871;
+    color: white;
+    border: none;
+    margin-right: 20px;
+  }
+  
+  .decryptButton {
+    background-color: #d8dfe8;
+    color: #0a3871;
+    border: 1px solid #0a3871;
+  }
+  
+  .section-2 {
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 840px;
+    right: 200px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
+  }
+  
+  .paragraphContainer {
+    position: absolute;
+    box-sizing: border-box;
+    top: 570px;
+    left: 40px;
+  }
+  
+  .paragraphContainer h3 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: #343a40;
+  }
+  
+  .paragraphContainer p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #495057;
+    padding-top: 20px;
+  }
+  
+  .resultContainer {
+    position: absolute;
+    bottom: 300px;
+    width: 320px;
+    height: 450px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 39px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .resultContainer p {
+    color: #495057;
+    font-size: 25px;
+  }
+  
+  .resultContainer.show {
+    opacity: 1;
+  }
+  
+  .resultText {
+    color: #495057;
+    font-size: 25px;
+  }
+  
+  .copyContainer {
+    display: flex;
+    position: absolute;
+    bottom: 400px;
+    top: 700px;
+    background-color: aqua;
+    padding-left: 40px;
+  }
+  
+  .btn-copy {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #0a3871;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #0a3871;
+    cursor: pointer;
+    position: relative;
+    top: 50px;
+    right: 4px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  /* Estilos para pantallas con un ancho de 600px o menos */
+  @media (max-width: 600px) {
+    .textBoxContainer,
+    .textBox {
+      width: 100%;
+    }
+  
+    .buttons-container {
+      flex-direction: column;
+    }
+  
+    .encryptButton,
+    .decryptButton {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .section-2 {
+      width: 100%;
+      right: 0;
+    }
+  
+    .personContainer {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  
+    main {
+      flex-direction: column-reverse;
+    }
+  }
